@@ -1,0 +1,45 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "ecommerce",
+    "packageName": "fd.app",
+    "packageFolder": "fd/app",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.1.2",
+    "jwtSecretKey": "NWEzYjQyOWFkMTE1MTUzODhjYTMyOTk1OTE4MmZkYjAxYjRjNmUxZTZmYTg2ZjA1NjNmOTE3NDA0OWIwYWU0ZTFkZWM5MGVlZTU3Y2ZmOTZlY2RmMzkzNzZmZjg3NmMzZjU3YjJmOGI0ODU2ZTdhODk1MDc2MmJmOTVkMTc1YTE=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "mamadoufodebailo",
+  "repository-name": "e-commerce"
+}
