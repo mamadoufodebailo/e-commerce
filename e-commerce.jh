@@ -1,0 +1,69 @@
+entity Country {
+	name String required
+}
+
+entity Department {
+	name String required
+}
+
+entity Region {
+	name String required
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Product {
+	name String required,
+	price Double required min(100) max(1000),
+	countStock Integer required min(1)
+}
+
+entity Category {
+	name String required
+}
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+relationship OneToOne {
+	Region{country}  to Country{name(name)}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Department{employee} to Employee{firstName(name)},
+    Employee{seller} to Product{name(firstName)},
+    Region{department} to Department{name(name)}
+}
+
+relationship ManyToOne {
+	Employee{manager} to Employee{firstName(firstName)},
+    Product{category} to Category{name(name)}
+}
+
+// Set pagination options
+paginate Product, Employee with infinite-scroll
+paginate all with pagination except Product, Employee
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Product, Category
+service Category with serviceClass
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
